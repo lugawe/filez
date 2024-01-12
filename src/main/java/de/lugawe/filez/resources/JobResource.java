@@ -1,10 +1,7 @@
 package de.lugawe.filez.resources;
 
 import jakarta.inject.Inject;
-import jakarta.ws.rs.Consumes;
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
@@ -14,8 +11,7 @@ import jakarta.ws.rs.core.Response;
 public class JobResource {
 
     @Inject
-    public JobResource() {
-    }
+    public JobResource() {}
 
     @GET
     @Path("/")
@@ -23,4 +19,21 @@ public class JobResource {
         return Response.ok().build();
     }
 
+    @POST
+    @Path("/")
+    public Response registerJob() {
+        return Response.ok().build();
+    }
+
+    @GET
+    @Path("/{jobId}/")
+    public Response getJob(@PathParam("jobId") long jobId) {
+        return Response.ok().build();
+    }
+
+    @POST
+    @Path("/{jobId}/")
+    public Response updateJob(@PathParam("jobId") long jobId) {
+        return Response.ok().build();
+    }
 }
