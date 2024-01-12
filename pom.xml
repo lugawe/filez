@@ -7,8 +7,8 @@
 
     <name>filez</name>
 
-    <groupId>de.lugawe</groupId>
-    <artifactId>filez</artifactId>
+    <groupId>de.lugawe.filez</groupId>
+    <artifactId>filez-server</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <packaging>jar</packaging>
