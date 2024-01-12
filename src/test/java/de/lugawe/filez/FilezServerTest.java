@@ -5,7 +5,5 @@ import org.junit.jupiter.api.Test;
 class FilezServerTest {
 
     @Test
-    void test() {
-    }
-
+    void test() {}
 }

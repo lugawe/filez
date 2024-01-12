@@ -20,6 +20,13 @@
 
     <dependencies>
 
+        <!-- https://mvnrepository.com/artifact/io.dropwizard/dropwizard-core -->
+        <dependency>
+            <groupId>io.dropwizard</groupId>
+            <artifactId>dropwizard-core</artifactId>
+            <version>4.0.5</version>
+        </dependency>
+
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
