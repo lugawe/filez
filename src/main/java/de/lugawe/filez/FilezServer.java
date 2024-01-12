@@ -2,9 +2,11 @@ package de.lugawe.filez;
 
 import de.lugawe.filez.util.Lazy;
 import io.dropwizard.core.Application;
+import io.dropwizard.core.setup.Bootstrap;
 import io.dropwizard.core.setup.Environment;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import ru.vyarus.dropwizard.guice.GuiceBundle;
 
 public class FilezServer extends Application<FilezServerConfiguration> {
 
@@ -14,6 +16,11 @@ public class FilezServer extends Application<FilezServerConfiguration> {
 
     public static void main(String[] args) throws Exception {
         instance.get().run(args);
+    }
+
+    @Override
+    public void initialize(Bootstrap<FilezServerConfiguration> bootstrap) {
+        bootstrap.addBundle(GuiceBundle.builder().enableAutoConfig().build());
     }
 
     @Override
